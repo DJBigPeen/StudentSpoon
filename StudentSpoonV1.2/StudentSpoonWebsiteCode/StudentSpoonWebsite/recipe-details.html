@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="View a full Student Spoon recipe with ingredients, method, cost, cooking time and comments.">
+  <title>Recipe details | Student Spoon</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <!-- Student Spoon prototype page: shared navigation, accessible structure and page-specific content. -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header"><div class="container header-content"><a class="brand" href="index.html" aria-label="Student Spoon home"><span class="brand-mark" aria-hidden="true">S</span><span>Student Spoon</span></a><button class="menu-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false"><span class="sr-only">Open navigation menu</span><span aria-hidden="true">☰</span><span class="menu-label">Menu</span></button><nav id="primary-navigation" class="primary-nav" aria-label="Primary navigation"><a href="index.html">Home</a><a class="active" href="recipes.html" aria-current="page">Recipes</a><a href="submit-recipe.html">Submit Recipe</a><a href="budget-tips.html">Budget Tips</a><a href="about.html">About</a></nav></div></header>
+
+  <main id="main-content">
+    <section class="section recipe-detail-section">
+      <div class="container">
+        <a class="back-link" href="recipes.html">← Back to all recipes</a>
+        <div id="recipeDetail" class="recipe-detail" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section section-tint" aria-labelledby="rating-heading">
+      <div class="container content-columns">
+        <article class="interaction-card">
+          <p class="eyebrow">Your view matters</p>
+          <h2 id="rating-heading">Rate this recipe</h2>
+          <p>Choose a rating from one to five stars. Your choice is stored only in this browser for this prototype.</p>
+          <div id="ratingControls" class="rating-controls" role="group" aria-label="Rate this recipe"></div>
+          <p id="ratingMessage" class="status-message" aria-live="polite"></p>
+        </article>
+        <article class="interaction-card" aria-labelledby="comments-heading">
+          <p class="eyebrow">Community prototype</p>
+          <h2 id="comments-heading">Leave a comment</h2>
+          <form id="commentForm" novalidate>
+            <label for="commentName">First name or nickname</label>
+            <input id="commentName" name="commentName" type="text" maxlength="30" autocomplete="off" required>
+            <p id="commentNameError" class="field-error" aria-live="polite"></p>
+            <label for="commentText">Your comment</label>
+            <textarea id="commentText" name="commentText" rows="4" maxlength="240" required></textarea>
+            <p id="commentTextError" class="field-error" aria-live="polite"></p>
+            <button class="button button-primary" type="submit">Post comment</button>
+          </form>
+          <p id="commentStatus" class="status-message" aria-live="polite"></p>
+          <div id="commentList" class="comment-list" aria-live="polite"></div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-content"><div><a class="brand brand-footer" href="index.html"><span class="brand-mark" aria-hidden="true">S</span><span>Student Spoon</span></a><p>Affordable, practical recipe ideas for students.</p></div><div><h2 class="footer-heading">Explore</h2><a href="recipes.html">Recipes</a><a href="submit-recipe.html">Submit Recipe</a><a href="budget-tips.html">Budget Tips</a></div><div><h2 class="footer-heading">Prototype note</h2><p>Recipe prices are estimates for demonstration purposes and can vary by shop and location.</p></div></div><div class="container footer-bottom">© <span class="current-year"></span> Student Spoon - Unit 15 prototype</div></footer>
+</body>
+</html>
